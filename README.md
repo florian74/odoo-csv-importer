@@ -12,6 +12,7 @@ The file can be taken either from a directory, or from minio's S3
 
 The server run with different environment variable to be provided.
 
+```
 if you are using minio: 
 MINIO_URL        -> minio url without https://
 MINIO_ACCESS_KEY -> minio user to use;
@@ -26,7 +27,7 @@ ODOO_PORT=8069; -> minio rpc port, default is 8069
 ODOO_DATABASE   -> odoo database name
 ODOO_PASSWORD   -> odoo password, odoo 15, api key seems not to work so use a dedicated user password
 ODOO_LOGIN      -> odoo login
-
+```
 After that the server can be run as a spring boot jar with java -jar build.jar
 This part is coming soon, I didn't deployed it yet.
 
