@@ -1,0 +1,114 @@
+configuration:
+  #assign file to  model according to their name
+  namings:
+    - model: "pos.category"
+      template: "*_category.csv"
+    - model: "res.partner"
+      template: "*_provider.csv"
+    - model: "product.product"
+      template: "*_product.csv"
+  #  - model: "stock.change.product.qty"
+  #    template: "*_stock.csv"
+    
+  #execution order of model importation, all partner, then all product, then all stock  
+  orders:
+    - name: "pos.category"
+    - name: "res.partner"
+    - name: "product.product"
+  #  - name: "stock.change.product.qty"
+    
+  #model config mapper
+ 
+ # important: This code does not create sub fields, what is non existant is not mapped !!!!
+ # exemple:  
+ #mappings:
+ #  - model: "exemple.model"    give the model to map here
+ #    fields:                   detail of the mapping
+ #      - name: "id"                           # there should always be an id field
+ #        header: "external ID"                # file column to map
+ #        target:                              # add target to set a reference to other table (model)
+ #          model: "ir.model.data"             # model to be referenced
+ #          field: "name"                      # field to be referenced
+ #          ref: "id"                          # mapping field, when using a ref attribute, the script will lookup for similar csv data then copy the id to the main field
+
+
+# ID								Type d'article	DESCRIPTION	STOCK	CODE_BARRE	FOURNISSEUR
+
+
+  mappings:
+    - model: "product.product"                 # model name to map
+      fields:                                  # list of fields to map
+        - name: "id"                           # there should always be an id field
+          header: "ID"
+          target: 
+              model: "ir.model.data"
+              field: "name"
+              ref: "res_id"
+        - name: "pos_categ_id"                 # field name that can be found in <model>.txt
+          header: "Categorie du point de vente"                   # header in csv file provided, for multiple match, separated by "," first will win
+          target: 
+              model:  "pos.category"           #target model
+              field:  "name"                   #field that should match csv data
+              ref:    "id"                     #value to use in mapping 
+        - name: "categ_id"                 # field name that can be found in <model>.txt
+          header: "FAMILLE"                   # header in csv file provided, for multiple match, separated by "," first will win
+          target:
+              model: "product.category"           #target model
+              field: "name"                   #field that should match csv data
+              ref: "id"                     #value to use in mapping    
+        - name: "price"                
+          header: "Prix de vente"
+        - name: "standard_price"
+          header: "PRIX_HT"
+        - name: "name"
+          header: "NOM"
+        - name: "taxes_id"
+          header: "Taxes a la vente"
+          target:
+             model: "account.tax"
+             field: "name"
+             ref: "id"
+        - name: "available_in_pos"
+          header: "Disponible dans le PdV"
+        - name: "detailed_type"
+          header: "Type d'article"  
+        - name: "description"
+          header: "DESCRIPTION"
+        - name: "barcode"
+          header: "CODE_BARRE"
+        - name: "partner_ref"
+          header: "FOURNISSEUR"
+          target:
+            model: "res.partner"
+            field: "email"
+            ref: "id"
+
+    - model: "res.partner"
+      fields:
+        - name: "id"
+          header: "id"
+          target:
+            model: "ir.model.data"
+            field: "name"
+            ref: "res_id"
+        - name: "email"
+          header: "Courriel"
+        - name: "name"
+          header: "Nom"
+        - name: "street"
+          header: "Rue"
+        - name: "comment"
+          header: "Notes"
+             
+    - model: "pos.category"
+      fields:
+        - name: "name"
+          header: "Categorie du point de vente"
+        - name: "id"
+          header: "id"
+          target:
+              model: "ir.model.data"
+              field: "name"
+              ref: "res_id"
+  
+      

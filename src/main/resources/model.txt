@@ -1,0 +1,506 @@
+name=Article, model=product.product, id=354, state=base
+name=Badge de ludification, model=gamification.badge, id=659, state=base
+name=Blacklist Email, model=mail.blacklist, id=167, state=base
+name=Bon de commande, model=sale.order, id=567, state=base
+name=Canal de discussion, model=mail.channel, id=177, state=base
+name=Commande fournisseur, model=purchase.order, id=553, state=base
+name=Compte, model=account.account, id=399, state=base
+name=Compte analytique, model=account.analytic.account, id=345, state=base
+name=Contact, model=res.partner, id=84, state=base
+name=Discussion par email, model=mail.thread, id=161, state=base
+name=Défi de ludification, model=gamification.challenge, id=656, state=base
+name=Gestion de l'email cc, model=mail.thread.cc, id=163, state=base
+name=Incorporer la blacklist, model=mail.thread.blacklist, id=162, state=base
+name=Inscription à l'évènement, model=event.registration, id=585, state=base
+name=Journal, model=account.journal, id=403, state=base
+name=Liste Noire de Téléphones, model=phone.blacklist, id=349, state=base
+name=Lot/N° série, model=stock.production.lot, id=472, state=base
+name=Membre de l'équipe commerciale., model=crm.team.member, id=564, state=base
+name=Mixin de la Liste Noire de Téléphones, model=mail.thread.phone, id=350, state=base
+name=Modèle d'article, model=product.template, id=352, state=base
+name=Modèles pour les comptes, model=account.account.template, id=429, state=base
+name=Paiements, model=account.payment, id=420, state=base
+name=Pièce comptable, model=account.move, id=415, state=base
+name=Préconfigurer pour créer une écriture pendant la correspondance entre des factures et des paiements, model=account.reconcile.model, id=412, state=base
+name=Rebut, model=stock.scrap, id=478, state=base
+name=Relevé bancaire, model=account.bank.statement, id=426, state=base
+name=Session du point de vente, model=pos.session, id=532, state=base
+name=Sondage, model=survey.survey, id=664, state=base
+name=Transfert, model=stock.picking, id=474, state=base
+name=Équipe commerciale, model=crm.team, id=565, state=base
+name=Évènement, model=event.event, id=581, state=base
+name=API SMS, model=sms.api, id=378, state=base
+name=API d'IAP Enrichissement de Pistes, model=iap.enrich.api, id=154, state=base
+name=Abonnés au document, model=mail.followers, id=168, state=base
+name=Accrued Orders Wizard, model=account.accrued.orders.wizard, id=457, state=base
+name=Accès Modèle, model=ir.model.access, id=8, state=base
+name=Actifs, model=ir.asset, id=17, state=base
+name=Action client, model=ir.actions.client, id=26, state=base
+name=Action du serveur, model=ir.actions.server, id=23, state=base
+name=Action-serveur, valeur correspondante, model=ir.server.object.lines, id=24, state=base
+name=Actions, model=ir.actions.actions, id=18, state=base
+name=Actions déclenchées, model=ir.cron.trigger, id=30, state=base
+name=Actions planifiées, model=ir.cron, id=29, state=base
+name=Activer le profilage pendant un certain temps, model=base.enable.profiling.wizard, id=74, state=base
+name=Activité, model=mail.activity, id=166, state=base
+name=Alias courriel, model=mail.alias, id=155, state=base
+name=Analyse des règles de stock, model=stock.rules.report, id=503, state=base
+name=Annulation Commande, model=sale.order.cancel, id=574, state=base
+name=Annuler le lettrage, model=account.unreconcile, id=442, state=base
+name=Aperçu du Modèle de SMS, model=sms.template.preview, id=385, state=base
+name=Aperçu du modèle d'importation de base, Caractère , model=base_import.tests.models.char, id=120, state=base
+name=Aperçu du modèle d'importation de base, Caractère sans lecture seule, model=base_import.tests.models.char.noreadonly, id=124, state=base
+name=Aperçu du modèle de courriel, model=mail.template.preview, id=206, state=base
+name=Application, model=ir.module.category, id=64, state=base
+name=Arrondi du compte, model=account.cash.rounding, id=439, state=base
+name=Aspiration automatique, model=ir.autovacuum, id=38, state=base
+name=Assignation des numéros de série, model=stock.assign.serial, id=490, state=base
+name=Assistant d'acquisition de paiement, model=payment.acquirer.onboarding.wizard, id=519, state=base
+name=Assistant d'ajustements fiscaux, model=tax.adjustments.wizard, id=452, state=base
+name=Assistant d'envoi de SMS, model=sms.composer, id=382, state=base
+name=Assistant d'invitation, model=mail.wizard.invite, id=207, state=base
+name=Assistant d'invitation à l'enquête, model=survey.invite, id=669, state=base
+name=Assistant d'objectif de ludification, model=gamification.goal.wizard, id=662, state=base
+name=Assistant de badge utilisateur de gamification, model=gamification.badge.user.wizard, id=663, state=base
+name=Assistant de changement de mot de passe, model=change.password.wizard, id=98, state=base
+name=Assistant de composition d'emails, model=mail.compose.message, id=202, state=base
+name=Assistant de configuration d'acquéreur de paiement pour les Ventes, model=sale.payment.acquirer.onboarding.wizard, id=572, state=base
+name=Assistant de configuration du 2 facteurs, model=auth_totp.wizard, id=117, state=base
+name=Assistant de fermeture de session, model=pos.close.session.wizard, id=540, state=base
+name=Assistant de renvoi d'email, model=mail.resend.message, id=204, state=base
+name=Assistant de réinitialisation de l'architecture de la vue, model=reset.view.arch.wizard, id=16, state=base
+name=Assistant de vérification de mot de passe, model=res.users.identitycheck, id=97, state=base
+name=Assistant intégration d'acquéreur de paiement pour le site web, model=website.sale.payment.acquirer.onboarding.wizard, id=641, state=base
+name=Assistants de configuration, model=ir.actions.todo, id=25, state=base
+name=Atouts Utils, model=web_editor.assets, id=136, state=base
+name=Audience d'un canal, model=mail.channel.partner, id=175, state=base
+name=Avatar Mixin, model=avatar.mixin, id=76, state=base
+name=Avertir sur Quantité de Rebut insuffisante, model=stock.warn.insufficient.qty.scrap, id=505, state=base
+name=Avertissement d'Ajustement d'Inventaire, model=stock.inventory.warning, id=495, state=base
+name=BIS3 DE (XRechnung), model=account.edi.xml.ubl_de, id=546, state=base
+name=Badge d'utilisateur de gamification, model=gamification.badge.user, id=658, state=base
+name=Balance de Fermeture des Relevés Bancaires, model=account.bank.statement.closebalance, id=425, state=base
+name=Bandeau Produit, model=product.ribbon, id=638, state=base
+name=Banque, model=res.bank, id=86, state=base
+name=Barcode Event Mixin, model=barcodes.barcode_events_mixin, id=142, state=base
+name=Base, model=base, id=1, state=base
+name=Base d'import, model=base_import.import, id=119, state=base
+name=Billet d'événement, model=event.event.ticket, id=590, state=base
+name=Bon de promotion, model=coupon.reward, id=674, state=base
+name=Bus de communication, model=bus.bus, id=145, state=base
+name=Caisse des relevés bancaires, model=account.bank.statement.cashbox, id=424, state=base
+name=Campagne UTM, model=utm.campaign, id=560, state=base
+name=Campagne de Coupon, model=coupon.program, id=676, state=base
+name=Capacité de la catégorie d'emplacement, model=stock.storage.category.capacity, id=482, state=base
+name=Caractéristique de l'article, model=product.attribute, id=357, state=base
+name=Catégorie d'UdM, model=uom.category, id=140, state=base
+name=Catégorie d'article, model=product.category, id=353, state=base
+name=Catégorie d'articles du site Web, model=product.public.category, id=639, state=base
+name=Catégorie d'Étiquette d'Événement, model=event.tag.category, id=587, state=base
+name=Catégorie du point de vente, model=pos.category, id=526, state=base
+name=Catégories Analytiques, model=account.analytic.group, id=344, state=base
+name=Catégories d'emplacement, model=stock.storage.category, id=481, state=base
+name=Champ Qweb, model=ir.qweb.field, id=42, state=base
+name=Champ Qweb HTML, model=ir.qweb.field.html, id=51, state=base
+name=Champ Qweb Many to One, model=ir.qweb.field.many2one, id=49, state=base
+name=Champ Qweb de Contact, model=ir.qweb.field.contact, id=59, state=base
+name=Champ Qweb de durée, model=ir.qweb.field.duration, id=56, state=base
+name=Champ Qweb de sélection, model=ir.qweb.field.selection, id=48, state=base
+name=Champ Qweb de texte, model=ir.qweb.field.text, id=47, state=base
+name=Champ Qweb image, model=ir.qweb.field.image, id=52, state=base
+name=Champ Qweb image, model=ir.qweb.field.image_url, id=53, state=base
+name=Champ Qweb many2many, model=ir.qweb.field.many2many, id=50, state=base
+name=Champ Qweb qweb, model=ir.qweb.field.qweb, id=60, state=base
+name=Champ date Qweb, model=ir.qweb.field.date, id=45, state=base
+name=Champ date Qweb, model=ir.qweb.field.datetime, id=46, state=base
+name=Champ entier Qweb, model=ir.qweb.field.integer, id=43, state=base
+name=Champ monétaire Qweb , model=ir.qweb.field.monetary, id=54, state=base
+name=Champs, model=ir.model.fields, id=4, state=base
+name=Changer la quantité d'articles, model=stock.change.product.qty, id=493, state=base
+name=Choisissez le modèle pour imprimer les étiquettes, model=product.label.layout, id=368, state=base
+name=Click du traqueur de liens, model=link.tracker.click, id=672, state=base
+name=Clôture des Ventes, model=account.sale.closing, id=550, state=base
+name=Code du traqueur de liens, model=link.tracker.code, id=671, state=base
+name=Code-barres du champ QWeb, model=ir.qweb.field.barcode, id=58, state=base
+name=Codice di applicazione coupon di vendita, model=sale.coupon.apply.code, id=679, state=base
+name=Colis, model=stock.quant.package, id=476, state=base
+name=Combinaison d'activités, model=mail.activity.mixin, id=157, state=base
+name=Combinaison de ressources, model=resource.mixin, id=147, state=base
+name=Commandes du point de vente, model=pos.order, id=528, state=base
+name=Common functions for EDI documents: generate the data, the constraints, etc, model=account.edi.common, id=541, state=base
+name=Compte IAP, model=iap.account, id=153, state=base
+name=Comptes bancaires, model=res.partner.bank, id=87, state=base
+name=Conditions de paiement, model=account.payment.term, id=413, state=base
+name=Configurateur d'Evènement, model=event.event.configurator, id=620, state=base
+name=Configuration, model=res.config, id=88, state=base
+name=Configuration du format papier, model=report.paperformat, id=72, state=base
+name=Configuration manuelle des paramètre de la banque, model=account.setup.bank.manual.config, id=451, state=base
+name=Confirmation de reliquat, model=stock.backorder.confirmation, id=501, state=base
+name=Confirmation du Suivi de Stock, model=stock.track.confirmation, id=507, state=base
+name=Confirmer Facture Snailmail, model=snailmail.confirm.invoice, id=522, state=base
+name=Confirmer envoi postal, model=snailmail.confirm, id=387, state=base
+name=Confirmer stock SMS, model=confirm.stock.sms, id=525, state=base
+name=Conflit dans l'inventaire, model=stock.inventory.conflict, id=494, state=base
+name=Conseil, model=digest.tip, id=392, state=base
+name=Contraintes du modèle, model=ir.model.constraint, id=6, state=base
+name=Contrat de Garantie de l'Editeur, model=publisher_warranty.contract, id=198, state=base
+name=Convertisseur de champs, model=ir.fields.converter, id=40, state=base
+name=Couche de valorisation d'inventaire, model=stock.valuation.layer, id=523, state=base
+name=Coupon, model=coupon.coupon, id=673, state=base
+name=Courriels à envoyer, model=mail.mail, id=172, state=base
+name=Cover Properties Website Mixin, model=website.cover_properties.mixin, id=594, state=base
+name=Create links that apply a coupon and redirect to a specific page, model=coupon.share, id=680, state=base
+name=Créer des Ecritures Automatiques, model=account.automatic.entry.wizard, id=441, state=base
+name=Créer le menu, model=wizard.ir.model.menu.create, id=10, state=base
+name=Devise, model=res.currency, id=91, state=base
+name=Digest, model=digest.digest, id=391, state=base
+name=Dispositif d'authentification, model=auth_totp.device, id=116, state=base
+name=Distribution Analytique, model=account.analytic.default, id=417, state=base
+name=Distribution de compte analytique, model=account.analytic.distribution, id=342, state=base
+name=Documents électroniques pour un déplacement de compte., model=account.edi.document, id=514, state=base
+name=Donner l'accès au portail, model=portal.wizard, id=373, state=base
+name=Définition d'objectif de ludification, model=gamification.goal.definition, id=654, state=base
+name=Démo, model=ir.demo, id=68, state=base
+name=Dépendances de module, model=ir.module.module.dependency, id=66, state=base
+name=Désinstallation du module, model=base.module.uninstall, id=109, state=base
+name=Détail des conditions de paiement, model=account.payment.term.line, id=414, state=base
+name=Détail du travail, model=resource.calendar.attendance, id=149, state=base
+name=Détails des congés de la ressource, model=resource.calendar.leaves, id=151, state=base
+name=Détails du PdV, model=report.point_of_sale.report_saledetails, id=531, state=base
+name=E-Commerce Extra Info Shown on product page, model=website.sale.extra.field, id=640, state=base
+name=E-FFF (BE), model=account.edi.xml.ubl_efff, id=548, state=base
+name=Editer la ligne du participant sur la confirmation de commande, model=registration.editor.line, id=619, state=base
+name=Editer les détails des participants sur la Confirmation de Vente., model=registration.editor, id=618, state=base
+name=Editeur de Robots.txt, model=website.robots, id=615, state=base
+name=Emballage des produits, model=product.packaging, id=355, state=base
+name=Emplacement de destination du Paquet, model=stock.package.destination, id=509, state=base
+name=Emplacements des stocks, model=stock.location, id=465, state=base
+name=Enregistrer un paiement, model=account.payment.register, id=454, state=base
+name=Entrepôt, model=stock.warehouse, id=477, state=base
+name=Erreur de Format lors de l'Envoi d'une Lettre par la Poste, model=snailmail.letter.format.error, id=389, state=base
+name=Etat de compte sans les paiements, model=report.account.report_invoice, id=459, state=base
+name=Etiquette CRM, model=crm.tag, id=566, state=base
+name=Event Template Ticket, model=event.type.ticket, id=589, state=base
+name=Exclusion d'attribut de modèle de produit, model=product.template.attribute.exclusion, id=361, state=base
+name=Exclusion de module, model=ir.module.module.exclusion, id=67, state=base
+name=Exports, model=ir.exports, id=34, state=base
+name=Factur-x/XRechnung CII 2.2.0, model=account.edi.xml.cii, id=542, state=base
+name=Facture de paiement d'avance, model=sale.advance.payment.inv, id=573, state=base
+name=Facture du compte envoyée, model=account.invoice.send, id=453, state=base
+name=Fenêtre d'action, model=ir.actions.act_window, id=19, state=base
+name=Fermer la Fenêtre d'Action, model=ir.actions.act_window_close, id=21, state=base
+name=Ficher Echange Informatise, model=account.fr.fec, id=549, state=base
+name=Filtres, model=ir.filters, id=31, state=base
+name=Format d'adresse, model=format.address.mixin, id=81, state=base
+name=Fusionner la ligne du partenaire, model=base.partner.merge.line, id=112, state=base
+name=Google Gmail Mixin, model=google.gmail.mixin, id=682, state=base
+name=Grade sur base du Karma, model=gamification.karma.rank, id=660, state=base
+name=Groupe d'approvisionnement, model=procurement.group, id=470, state=base
+name=Groupe de comptes, model=account.group, id=400, state=base
+name=Groupe de journal, model=account.journal.group, id=402, state=base
+name=Groupe de pays, model=res.country.group, id=78, state=base
+name=Groupe de taxe, model=account.tax.group, id=404, state=base
+name=Groupes d'accès, model=res.groups, id=94, state=base
+name=Générer le Coupon, model=coupon.generate.wizard, id=678, state=base
+name=Générer le lien de paiement des ventes, model=payment.link.wizard, id=520, state=base
+name=Historique des quantités en stock, model=stock.quantity.history, id=502, state=base
+name=Historisation, model=ir.logging, id=62, state=base
+name=IAP Partner Autocomplete API, model=iap.autocomplete.api, id=369, state=base
+name=Icône de paiement, model=payment.icon, id=516, state=base
+name=Image de l'article, model=product.image, id=637, state=base
+name=Importation de langue, model=base.language.import, id=107, state=base
+name=Impression de journal comptable, model=account.print.journal, id=448, state=base
+name=Inconnu, model=_unknown, id=2, state=base
+name=Incorporer les alias email, model=mail.alias.mixin, id=158, state=base
+name=Incoterms, model=account.incoterms, id=440, state=base
+name=Installateur Configuration, model=res.config.installer, id=89, state=base
+name=Installation de langue, model=base.language.install, id=106, state=base
+name=Intermédiaire de Paiement, model=payment.acquirer, id=515, state=base
+name=Invité, model=mail.guest, id=178, state=base
+name=Jeton de paiement, model=payment.token, id=517, state=base
+name=Lancez le planificateur manuellement, model=stock.scheduler.compute, id=497, state=base
+name=Langue d'export, model=base.language.export, id=110, state=base
+name=Langues, model=res.lang, id=80, state=base
+name=Les 2 premiers chiffres des codes du compte , model=account.root, id=401, state=base
+name=Lettrage, model=account.full.reconcile, id=419, state=base
+name=Lettre Snailmail, model=snailmail.letter, id=386, state=base
+name=Ligne Modèle de devis, model=sale.order.template.line, id=578, state=base
+name=Ligne analytique, model=account.analytic.line, id=346, state=base
+name=Ligne d'attribut du modèle d'article, model=product.template.attribute.line, id=359, state=base
+name=Ligne d'export, model=ir.exports.line, id=35, state=base
+name=Ligne de Bon de Retour, model=stock.return.picking.line, id=491, state=base
+name=Ligne de Confirmation de reliquat, model=stock.backorder.confirmation.line, id=500, state=base
+name=Ligne de Suivi du Stock, model=stock.track.line, id=508, state=base
+name=Ligne de Transfert Immédiat, model=stock.immediate.transfer.line, id=498, state=base
+name=Ligne de bons de commande, model=sale.order.line, id=568, state=base
+name=Ligne de caisse, model=account.cashbox.line, id=423, state=base
+name=Ligne de commande d'achat, model=purchase.order.line, id=554, state=base
+name=Ligne de rapport de taxes, model=account.tax.report.line, id=409, state=base
+name=Ligne de relevé bancaire, model=account.bank.statement.line, id=427, state=base
+name=Ligne de répartition de la taxe, model=account.tax.repartition.line, id=406, state=base
+name=Ligne de saisie pour l'utilisateur du sondage, model=survey.user_input.line, id=668, state=base
+name=Lignes des commandes du point de vente, model=pos.order.line, id=529, state=base
+name=Liste de prix, model=product.pricelist, id=363, state=base
+name=Liste de prix du fournisseur, model=product.supplierinfo, id=356, state=base
+name=Log utilisateurs, model=res.users.log, id=95, state=base
+name=Mail Bot, model=mail.bot, id=348, state=base
+name=Mail Composer Mixin, model=mail.composer.mixin, id=160, state=base
+name=Mail RTC session, model=mail.channel.rtc.session, id=176, state=base
+name=Mail Render Mixin, model=mail.render.mixin, id=159, state=base
+name=Mappage de taxes de la position fiscale, model=account.fiscal.position.tax, id=395, state=base
+name=Mapping d'importation de base, model=base_import.mapping, id=118, state=base
+name=Medium UTM, model=utm.medium, id=559, state=base
+name=Menu, model=ir.ui.menu, id=13, state=base
+name=Menu des thèmes site web, model=theme.website.menu, id=607, state=base
+name=Menu des événements du site Web, model=website.event.menu, id=616, state=base
+name=Menu du site web, model=website.menu, id=600, state=base
+name=Merge Partner Wizard, model=base.partner.merge.automatic.wizard, id=113, state=base
+name=Message, model=mail.message, id=171, state=base
+name=Message Reaction, model=mail.message.reaction, id=169, state=base
+name=Mettre à jour l'adresse du partenaire, model=snailmail.letter.missing.required.fields, id=390, state=base
+name=Mettre à jour les traductions, model=base.update.translations, id=111, state=base
+name=Mise en page des documents de votre société, model=base.document.layout, id=115, state=base
+name=Mise en page des rapports, model=report.layout, id=71, state=base
+name=Mise à jour du module, model=base.module.update, id=105, state=base
+name=Mix d'images, model=image.mixin, id=75, state=base
+name=Mix d'évaluations, model=rating.mixin, id=635, state=base
+name=Mixin de L'Evaluation Parente, model=rating.parent.mixin, id=634, state=base
+name=Moappage des comptes de position fiscale, model=account.fiscal.position.account, id=396, state=base
+name=Modes de paiement au point de vente, model=pos.payment.method, id=534, state=base
+name=Module, model=ir.module.module, id=65, state=base
+name=Module de mise à jour, model=base.module.upgrade, id=108, state=base
+name=Module référence de rapport (base), model=report.base.report_irmodulereference, id=104, state=base
+name=Modèle associé, model=ir.model.relation, id=7, state=base
+name=Modèle d'assistant pour revaloriser un inventaire pour un article, model=stock.valuation.layer.revaluation, id=524, state=base
+name=Modèle d'événement, model=event.type, id=580, state=base
+name=Modèle de Données, model=ir.model.data, id=9, state=base
+name=Modèle de devis, model=sale.order.template, id=577, state=base
+name=Modèle de lettrage, model=account.reconcile.model.template, id=436, state=base
+name=Modèle de ligne de réparation de taxes, model=account.tax.repartition.line.template, id=432, state=base
+name=Modèle de mappage de taxes de la position fiscale, model=account.fiscal.position.tax.template, id=434, state=base
+name=Modèle de mappage des comptes de position fiscale, model=account.fiscal.position.account.template, id=435, state=base
+name=Modèle de plan comptable, model=account.chart.template, id=430, state=base
+name=Modèle de position fiscale, model=account.fiscal.position.template, id=433, state=base
+name=Modèle pour les Groupes de Comptes, model=account.group.template, id=428, state=base
+name=Modèles, model=ir.model, id=3, state=base
+name=Modèles d'emails, model=mail.template, id=174, state=base
+name=Modèles de SMS, model=sms.template, id=380, state=base
+name=Modèles pour les taxes, model=account.tax.template, id=431, state=base
+name=Mouvement d'inventaire, model=stock.move, id=467, state=base
+name=Mouvements d'article (Ligne de mouvement de stock), model=stock.move.line, id=468, state=base
+name=Multi Site Mixin, model=website.multi.mixin, id=595, state=base
+name=Multi site publié Mixin, model=website.published.multi.mixin, id=597, state=base
+name=Mélange UTM, model=utm.mixin, id=563, state=base
+name=Mélange du portal, model=portal.mixin, id=371, state=base
+name=Métadonnées SEO, model=website.seo.metadata, id=593, state=base
+name=Méthodes de paiements, model=account.payment.method, id=421, state=base
+name=Méthodes de paiements, model=account.payment.method.line, id=422, state=base
+name=Niveau de Colisage, model=stock.package_level, id=479, state=base
+name=Nomenclature de code-barres, model=barcode.nomenclature, id=143, state=base
+name=Notifications par message, model=mail.notification, id=164, state=base
+name=Objectif de ludification, model=gamification.goal, id=655, state=base
+name=Objectif générique de ludification pour les défis, model=gamification.challenge.line, id=657, state=base
+name=Obtenez le résultat de l'intégrité du hash au format PDF., model=report.account.report_hash_integrity, id=462, state=base
+name=Obtenir le résultat de la vérication d'intégrité de la caisse française en PDF., model=report.l10n_fr_pos_cert.report_pos_hash_integrity, id=551, state=base
+name=Option Modèle de devis, model=sale.order.template.option, id=579, state=base
+name=Options de vente, model=sale.order.option, id=576, state=base
+name=Page, model=website.page, id=601, state=base
+name=Page des thèmes site web, model=theme.website.page, id=608, state=base
+name=Pages visitées, model=website.track, id=613, state=base
+name=Paiements au point de vente, model=pos.payment, id=533, state=base
+name=Paramètre système, model=ir.config_parameter, id=37, state=base
+name=Paramètres de config, model=res.config.settings, id=90, state=base
+name=Paramètres utilisateur, model=res.users.settings, id=181, state=base
+name=Paramétrage du point de vente, model=pos.config, id=527, state=base
+name=Paramétrage du portail utilisateur, model=portal.wizard.user, id=374, state=base
+name=Partage du portal, model=portal.share, id=372, state=base
+name=Partner mapping for reconciliation models, model=account.reconcile.model.partner.mapping, id=410, state=base
+name=Partner with additional information for mail resend, model=mail.resend.partner, id=205, state=base
+name=Payment Refund Wizard, model=payment.refund.wizard, id=521, state=base
+name=Pays, model=res.country, id=77, state=base
+name=Pièce jointe, model=ir.attachment, id=28, state=base
+name=Pièces/Billets, model=pos.bill, id=535, state=base
+name=Planificateur d'email d'inscription, model=event.mail.registration, id=584, state=base
+name=Planification d'e-mails en fonction de la catégorie d'évènement, model=event.type.mail, id=582, state=base
+name=Point de Vente Faire un paiement, model=pos.make.payment, id=539, state=base
+name=Point of Sale Details, model=report.advanced_pos_reports.report_pos_saledetails, id=646, state=base
+name=Point of Sale Details User Report, model=pos.sale.details.wizard, id=642, state=base
+name=Point of Sale Ongoing Session Report, model=pos.sale.ongoing.wizard, id=644, state=base
+name=Point of Sale Posted Session Report, model=pos.sale.posted.wizard, id=645, state=base
+name=Point of Sale Top Selling Product/Category/Customer Report, model=pos.sale.top.selling, id=643, state=base
+name=Position fiscale, model=account.fiscal.position, id=394, state=base
+name=Propriété de la société, model=ir.property, id=63, state=base
+name=Précision décimale, model=decimal.precision, id=103, state=base
+name=Présence de l'utilisateur, model=bus.presence, id=146, state=base
+name=Prévenir en cas de quantité insuffisante, model=stock.warn.insufficient.qty, id=504, state=base
+name=Publipostage automatisé pour un événement, model=event.mail, id=583, state=base
+name=Quants, model=stock.quant, id=475, state=base
+name=Question du sondage, model=survey.question, id=665, state=base
+name=Qweb, model=ir.qweb, id=41, state=base
+name=Qweb Field Float, model=ir.qweb.field.float, id=44, state=base
+name=Qweb Field Float Time, model=ir.qweb.field.float_time, id=55, state=base
+name=Rapport d'Etiquettes Article, model=report.stock.label_product_product_view, id=489, state=base
+name=Rapport d'Etiquettes produit, model=report.product.report_producttemplatelabel, id=365, state=base
+name=Rapport d'Etiquettes produit, model=report.product.report_producttemplatelabel_dymo, id=366, state=base
+name=Rapport d'achat, model=purchase.report, id=555, state=base
+name=Rapport d'analyse des ventes, model=sale.report, id=569, state=base
+name=Rapport de Réapprovisionnements de Stock, model=report.stock.report_product_template_replenishment, id=484, state=base
+name=Rapport de Réapprovisionnements de Stock, model=report.stock.report_product_product_replenishment, id=483, state=base
+name=Rapport de comptabilité, model=account.common.report, id=446, state=base
+name=Rapport de compte avec ligne de paiements, model=report.account.report_invoice_with_payments, id=460, state=base
+name=Rapport de facturation du PdV, model=report.point_of_sale.report_invoice, id=536, state=base
+name=Rapport de journal de compte, model=report.account.report_journal, id=461, state=base
+name=Rapport de liste de prix, model=report.product.report_pricelist, id=367, state=base
+name=Rapport de quantité en stock, model=report.stock.quantity, id=485, state=base
+name=Rapport de règle de stock, model=report.stock.report_stock_rule, id=487, state=base
+name=Rapport de taxes du compte, model=account.tax.report, id=408, state=base
+name=Rapport de traçabilité, model=stock.traceability.report, id=488, state=base
+name=Rapport des Retards Fournisseurs, model=vendor.delay.report, id=557, state=base
+name=Rapport du journal courant, model=account.common.journal.report, id=447, state=base
+name=Rapport détaillé du PdV, model=pos.details.wizard, id=538, state=base
+name=Rapport pro forma, model=report.sale.report_saleproforma, id=570, state=base
+name=Rapport sur les commandes au point de vente, model=report.pos.order, id=537, state=base
+name=Rapport sur les coupons de vente, model=report.coupon.report_coupon, id=677, state=base
+name=Rapprochement, model=account.partial.reconcile, id=418, state=base
+name=Reconcile Model Line Template, model=account.reconcile.model.line.template, id=437, state=base
+name=Rejeter la notification de renvoi par modèle, model=snailmail.letter.cancel, id=388, state=base
+name=Rejeter la notification de renvoi par modèle, model=mail.resend.cancel, id=203, state=base
+name=Rejeter la notification de renvoi par modèle, model=sms.cancel, id=381, state=base
+name=Relatif au champ Qweb, model=ir.qweb.field.relative, id=57, state=base
+name=Remake the sequence of Journal Entries., model=account.resequence.wizard, id=449, state=base
+name=Remove email from blacklist wizard, model=mail.blacklist.remove, id=201, state=base
+name=Renversement de la pièce comptable, model=account.move.reversal, id=445, state=base
+name=Renvoi de SMS, model=sms.resend, id=384, state=base
+name=Renvoyer la Notification, model=sms.resend.recipient, id=383, state=base
+name=Reporter le Point de Commande, model=stock.orderpoint.snooze, id=510, state=base
+name=Ressources, model=resource.resource, id=150, state=base
+name=Retour à la cueillette, model=stock.return.picking, id=492, state=base
+name=Routage HTTP, model=ir.http, id=61, state=base
+name=Routes logistiques, model=stock.location.route, id=466, state=base
+name=Règle, model=ir.rule, id=36, state=base
+name=Règle coupon, model=coupon.rule, id=675, state=base
+name=Règle de code-barres, model=barcode.rule, id=144, state=base
+name=Règle de stock minimum, model=stock.rule, id=469, state=base
+name=Règle de stock minimum., model=stock.warehouse.orderpoint, id=471, state=base
+name=Règle des listes des prix, model=product.pricelist.item, id=364, state=base
+name=Règles pour les modèles de réconciliation, model=account.reconcile.model.line, id=411, state=base
+name=Réapprovisionnement d'Article, model=product.replenish, id=506, state=base
+name=Référence/raison de l'ajustement, model=stock.inventory.adjustment.name, id=496, state=base
+name=Réponse en conserve / Code court, model=mail.shortcode, id=180, state=base
+name=Résultats du profilage, model=ir.profile, id=73, state=base
+name=Réécriture du site Web, model=website.rewrite, id=603, state=base
+name=SI-UBL 2.0 (NLCIUS), model=account.edi.xml.ubl_nl, id=547, state=base
+name=SMS Sortant, model=sms.sms, id=379, state=base
+name=Saisie utilisateur du sondage, model=survey.user_input, id=667, state=base
+name=Secteur, model=res.partner.industry, id=85, state=base
+name=Serveur ICE, model=mail.ice.server, id=179, state=base
+name=Serveur d'email, model=ir.mail_server, id=39, state=base
+name=Serveur de courriels entrant, model=fetchmail.server, id=347, state=base
+name=Service Google, model=google.service, id=681, state=base
+name=Signaler l'action, model=ir.actions.report, id=27, state=base
+name=Site Web, model=website, id=599, state=base
+name=Site Web publié Mixin, model=website.published.mixin, id=596, state=base
+name=Sociétés, model=res.company, id=93, state=base
+name=Solde initial de l'année fiscale, model=account.financial.year.op, id=450, state=base
+name=Sortie de caisse, model=cash.box.out, id=444, state=base
+name=Source UTM, model=utm.source, id=561, state=base
+name=Sous-test du convertisseur de l'éditeur Web, model=web_editor.converter.test.sub, id=138, state=base
+name=Sous-types de messages, model=mail.message.subtype, id=170, state=base
+name=Spécifiez le lot de produit / numéro de série dans la ligne de commande PdV, model=pos.pack.operation.lot, id=530, state=base
+name=Statistiques des factures, model=account.invoice.report, id=458, state=base
+name=Statégie de rangement, model=stock.putaway.rule, id=464, state=base
+name=Stock Demander un Comptage, model=stock.request.count, id=511, state=base
+name=Stock Rapport de Réception, model=report.stock.report_reception, id=486, state=base
+name=Stock information fournisseur pour réapprovisionnement, model=stock.replenishment.info, id=512, state=base
+name=Stock package type, model=stock.package.type, id=480, state=base
+name=Stratégie d'enlèvement, model=product.removal, id=463, state=base
+name=Supprimer le numéro de téléphone de la liste noire, model=phone.blacklist.remove, id=351, state=base
+name=Synchronisation de l'Autocomplétion de Partenaires, model=res.partner.autocomplete.sync, id=370, state=base
+name=Sélection des Champs, model=ir.model.fields.selection, id=5, state=base
+name=Séquence, model=ir.sequence, id=11, state=base
+name=Séquence automatique, model=sequence.mixin, id=393, state=base
+name=Séquence de dates, model=ir.sequence.date_range, id=12, state=base
+name=Tag UTM, model=utm.tag, id=562, state=base
+name=Taux de la devise, model=res.currency.rate, id=92, state=base
+name=Tax carryover line, model=account.tax.carryover.line, id=407, state=base
+name=Taxe, model=account.tax, id=405, state=base
+name=Temps de travail de la ressource, model=resource.calendar, id=148, state=base
+name=Test du convertisseur de l'éditeur Web, model=web_editor.converter.test, id=137, state=base
+name=Tester le modèle de ressource, model=resource.test, id=152, state=base
+name=Tests: Aperçu du modèle d'importation de base, model=base_import.tests.models.preview, id=132, state=base
+name=Tests: Complexe du Modèle d'Importation de Base, model=base_import.tests.models.complex, id=134, state=base
+name=Tests: Modèle d'importation de base, Caractère lecture seule, model=base_import.tests.models.char.readonly, id=122, state=base
+name=Tests: Modèle d'importation de base, Caractère requis, model=base_import.tests.models.char.required, id=121, state=base
+name=Tests: Modèle d'importation de base, Caractère toujours en lecture seule, model=base_import.tests.models.char.stillreadonly, id=125, state=base
+name=Tests: Modèle d'importation de base, Etat du caractère, model=base_import.tests.models.char.states, id=123, state=base
+name=Tests: Modèle d'importation de base, One to Many child, model=base_import.tests.models.o2m.child, id=131, state=base
+name=Tests: Modèle d'importation de base, Plusieurs à un, model=base_import.tests.models.m2o, id=126, state=base
+name=Tests: Modèle d'importation de base, Plusieurs à un relatif, model=base_import.tests.models.m2o.related, id=127, state=base
+name=Tests: Modèle d'importation de base, Plusieurs à un requis, model=base_import.tests.models.m2o.required, id=128, state=base
+name=Tests: Modèle d'importation de base, Plusieurs à un requis relatif, model=base_import.tests.models.m2o.required.related, id=129, state=base
+name=Tests: Modèle d'importation de base, Un à plusieurs, model=base_import.tests.models.o2m, id=130, state=base
+name=Tests: flotteur du modèle d'importation de base, model=base_import.tests.models.float, id=133, state=base
+name=Theme Asset, model=theme.ir.asset, id=604, state=base
+name=Thème Vue UI, model=theme.ir.ui.view, id=605, state=base
+name=Thème pièce-jointe, model=theme.ir.attachment, id=606, state=base
+name=Thèmes utiles, model=theme.utils, id=609, state=base
+name=Titre du partenaire, model=res.partner.title, id=83, state=base
+name=Tour de découverte du téléchargement d'une facture, model=account.tour.upload.bill, id=455, state=base
+name=Tour de découverte du téléchargement d'une facture par courriel, model=account.tour.upload.bill.email.confirm, id=456, state=base
+name=Tout l'itinéraire de site Web, model=website.route, id=602, state=base
+name=Track Karma Changes, model=gamification.karma.tracking, id=661, state=base
+name=Traduction, model=ir.translation, id=33, state=base
+name=Transaction, model=payment.transaction, id=518, state=base
+name=Transfert immédiat, model=stock.immediate.transfer, id=499, state=base
+name=Traqueur de liens, model=link.tracker, id=670, state=base
+name=Type d'activité, model=mail.activity.type, id=165, state=base
+name=Type de compte, model=account.account.type, id=398, state=base
+name=Type de préparation, model=stock.picking.type, id=473, state=base
+name=UBL 2.0, model=account.edi.xml.ubl_20, id=543, state=base
+name=UBL 2.1, model=account.edi.xml.ubl_21, id=544, state=base
+name=UBL BIS Billing 3.0.12, model=account.edi.xml.ubl_bis3, id=545, state=base
+name=URL de l'Action, model=ir.actions.act_url, id=22, state=base
+name=Union des achats & factures, model=purchase.bill.union, id=556, state=base
+name=Unit of Measure for price per unit on eCommerce products., model=website.base.unit, id=636, state=base
+name=Unité de mesure d'article, model=uom.uom, id=141, state=base
+name=User Settings Volumes, model=res.users.settings.volumes, id=182, state=base
+name=Utilisateur, Assistant de changement de mot de passe, model=change.password.user, id=99, state=base
+name=Utilisateurs, model=res.users, id=96, state=base
+name=Valeur caractéristique personnalisée du produit, model=product.attribute.custom.value, id=362, state=base
+name=Valeur caratéristique du modèle produit, model=product.template.attribute.value, id=360, state=base
+name=Valeur de la caractéristique, model=product.attribute.value, id=358, state=base
+name=Valeur de suivi des courriers, model=mail.tracking.value, id=173, state=base
+name=Valeurs par défaut, model=ir.default, id=32, state=base
+name=Valider les mouvements de compte, model=validate.account.move, id=443, state=base
+name=Ventes par canal (Tout en un), model=report.all.channels.sales, id=571, state=base
+name=Visites, model=web_tour.tour, id=139, state=base
+name=Visiteur du site web, model=website.visitor, id=614, state=base
+name=Vue, model=ir.ui.view, id=15, state=base
+name=Vue de la Fenêtre d'Action, model=ir.actions.act_window.view, id=20, state=base
+name=Vue personnalisée, model=ir.ui.view.custom, id=14, state=base
+name=Website Configurator Feature, model=website.configurator.feature, id=610, state=base
+name=Website Searchable Mixin, model=website.searchable.mixin, id=598, state=base
+name=Website Snippet Filter, model=website.snippet.filter, id=612, state=base
+name=format EDI, model=account.edi.format, id=513, state=base
+name=pos.report, model=pos.report, id=652, state=base
+name=report.advanced_pos_reports.report_pos_ongoing_session, model=report.advanced_pos_reports.report_pos_ongoing_session, id=648, state=base
+name=report.advanced_pos_reports.report_pos_posted_session, model=report.advanced_pos_reports.report_pos_posted_session, id=647, state=base
+name=report.advanced_pos_reports.report_pos_top_selling_categories, model=report.advanced_pos_reports.report_pos_top_selling_categories, id=650, state=base
+name=report.advanced_pos_reports.report_pos_top_selling_customers, model=report.advanced_pos_reports.report_pos_top_selling_customers, id=651, state=base
+name=report.advanced_pos_reports.report_pos_top_selling_products, model=report.advanced_pos_reports.report_pos_top_selling_products, id=649, state=base
+name=report.pos_report_generator.pos_order_report, model=report.pos_report_generator.pos_order_report, id=653, state=base
+name=res.users.apikeys, model=res.users.apikeys, id=100, state=base
+name=res.users.apikeys.description, model=res.users.apikeys.description, id=101, state=base
+name=res.users.apikeys.show, model=res.users.apikeys.show, id=102, state=base
+name=Échec de la démo, model=ir.demo_failure.wizard, id=70, state=base
+name=Échec de la démo, model=ir.demo_failure, id=69, state=base
+name=Écriture comptable, model=account.move.line, id=416, state=base
+name=Étape d'Événement, model=event.stage, id=586, state=base
+name=Étapes de la campagne, model=utm.stage, id=558, state=base
+name=État, model=res.country.state, id=79, state=base
+name=Étiquette du compte, model=account.account.tag, id=397, state=base
+name=Étiquette du sondage, model=survey.question.answer, id=666, state=base
+name=Étiquettes analytiques, model=account.analytic.tag, id=343, state=base
+name=Étiquettes d'Événement, model=event.tag, id=588, state=base
+name=Étiquettes du partenaire, model=res.partner.category, id=82, state=base
+name=Évaluation, model=rating.rating, id=633, state=base
