@@ -39,23 +39,6 @@ public class Importer {
         this.dateFormat = dateFormat;
         if (connector != null && connector.getIsOk()) {
             this.service = new OdooCommand(connector.getSession());
-            
-            
-            try {
-                Map<String, Object> fields = service.getFields("product.supplierinfo", new String[]{});
-                log.info("fields from tax " + fields.toString() );
-
-                Response p = service.searchObject("product.supplierinfo", new Object[]{});
-                Object[] q = service.readObject("product.supplierinfo", p.getResponseObjectAsArray(), fields.keySet().toArray(new String[0]));
-                Arrays.stream(q).forEach(obj ->
-                        log.info(((Map<String, Object>) obj).toString())
-                );
-                
-     
-            } catch (Exception e) {
-                log.error("execption occured", e);
-            }
-            
         }
         // load model info
         this.models = getModels();
