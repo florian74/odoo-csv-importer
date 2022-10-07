@@ -106,20 +106,21 @@ public class Importer {
             ).map(Mapper.Mapping::getFields)
                     .flatMap(f -> f.stream())
                     .filter(f -> f.getTarget() != null)
-                    .map(f -> f.getTarget().getModel())
+                    .flatMap(f -> f.getTarget().stream().map(t -> t.getModel()))
                     .distinct().collect(Collectors.toList());
             
             List<String> mapperModel = mapper.getNamings().stream().map(Mapper.Naming::getModel).collect(Collectors.toList());
         
             return Stream.concat(additionalModels.stream(), mapperModel.stream())
                     .map(
+                            // retrieve all field info by model
                             model -> {
-                                Map<String, Object> f = null;
+                                Map<String, Object> modelDocFields = null;
                                 try {
                                     if (service != null ) {
-                                        f = service.getFields(model, new String[0]);
+                                        modelDocFields = service.getFields(model, new String[0]);
                                     }
-                                    return new OdooModel(model, f, dateFormat);
+                                    return new OdooModel(model, modelDocFields, dateFormat);
                                 } catch (XmlRpcException e) {
                                     e.printStackTrace();
                                 }

@@ -75,7 +75,11 @@ public class OdooModel {
                 case "integer":
                 case "many2one":
                 case "many2one_reference":
-                    return Integer.parseInt(stringValue);
+                    try {
+                        return Integer.parseInt(stringValue);
+                    } catch (NumberFormatException e) {
+                        return stringValue;
+                    }
                 case "float":
                     return Double.parseDouble(stringValue);
                 case "binary":
@@ -111,7 +115,7 @@ public class OdooModel {
         
         String fieldType = getTypes().get(fieldName);
         if (fieldType == null) {
-            throw new IllegalArgumentException("field " + fieldName + " is not in model" + name);
+            throw new IllegalArgumentException("field " + fieldName + " is not in model " + name);
         }
         
         if (fieldType.equals(refType)) {

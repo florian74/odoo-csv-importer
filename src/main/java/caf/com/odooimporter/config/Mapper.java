@@ -6,6 +6,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -16,11 +17,11 @@ import java.util.List;
 @ToString
 public class Mapper {
 
-    List<Naming> namings;
+    List<Naming> namings = new ArrayList<>();
     
-    List<Model> orders; 
+    List<Model> orders = new ArrayList<>(); 
     
-    List<Mapping> mappings;
+    List<Mapping> mappings = new ArrayList<>();
 
     @Getter
     @Setter
@@ -49,7 +50,7 @@ public class Mapper {
     public static class Mapping {
 
         String model;
-        List<Field> fields;
+        List<Field> fields = new ArrayList<>();
 
     }
 
@@ -59,9 +60,10 @@ public class Mapper {
     @NoArgsConstructor
     @ToString
     public static class Field {
-        String name;
-        String header;
-        Target target;
+        String name;                                // name of the model field
+        String header;                              // name of the csv header
+        List<Target> target = new ArrayList<>();    // list of successive mapping
+        String set;                                 // default value to use
     }
 
     @Getter
@@ -73,7 +75,6 @@ public class Mapper {
         String model;
         String field;
         String ref;
-        String override;
     }
     
 }
