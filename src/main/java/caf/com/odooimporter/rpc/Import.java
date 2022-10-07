@@ -41,22 +41,19 @@ public class Import {
             throw new IllegalArgumentException("file is empty");
         }
         if (mapping == null) {
-            throw new IllegalArgumentException("model " + mapping.getModel() + "  has no mapping define, please review yaml config mappings section.");
+            throw new IllegalArgumentException("model " + model.getName() + "  has no mapping define, please review yaml config mappings section.");
         }
         
         // read csv header
         List<String> header = values.get(0);
-        log.debug("headers: " + header.stream().collect(Collectors.joining(",")));
+        log.debug("headers: " + String.join(",",header));
         
         // key: DB, value: index in array in column file
         Map<String, Integer> headerMap = new HashMap<>();
-        mapping.getFields().stream().forEach(field -> {
-            headerMap.put(field.getName(), header.indexOf(field.getHeader()));
-        });
+        mapping.getFields().forEach(field -> headerMap.put(field.getName(), header.indexOf(field.getHeader())));
         headerMap.values().removeIf(index -> (index == -1));  // if some header are not found but mapping actually set default value, it's still fine
-        log.debug("headers Map: " + headerMap.keySet().stream().collect(Collectors.joining(",")));
-
-
+        log.debug("headers Map: " + String.join(",", headerMap.keySet()));
+        
         // find id header
         Integer idIndex = headerMap.get("id");
         Mapper.Field idField = mapping.getFields().stream().filter(f -> "id".equals(f.getName())).findFirst().orElse(null);
@@ -66,7 +63,7 @@ public class Import {
         }
         
         // By line: check existence
-        values.subList(1, values.size()).stream().forEach(
+        values.subList(1, values.size()).forEach(
             line -> {
                 try {
                         // create object
@@ -86,7 +83,7 @@ public class Import {
                             mapping.getFields().stream()
                                     .filter(field -> csvHead.equals(field.getHeader()))
                                     .forEach(field -> {
-                                                log.info("found " + field.getName() + " ,value " + line.get(idx) + " header: " + field.getHeader());
+                                                log.trace("found " + field.getName() + " ,value " + line.get(idx) + " header: " + field.getHeader());
                                                 toImport.values.put(field.getName(), line.get(idx));
                                             }
                                     );
@@ -96,7 +93,7 @@ public class Import {
                         
                         mapping.getFields().forEach(field -> {
                             Object value = getValue(toImport, field, allModels);
-                            log.info("found " +  value +  ", for field " + field.getName());
+                            log.trace("found " +  value +  ", for field " + field.getName());
                             toImport.values.put(field.getName(), value);
                         });
                         toImport.values.values().removeIf(Objects::isNull);
@@ -110,7 +107,7 @@ public class Import {
                             
                             // create if not exist
                             toImport.values.remove("id");
-                            log.info("creating object, with values " + toImport.values.entrySet().stream().map(a -> a.toString()).collect(Collectors.joining(",")));
+                            log.info("creating object, with values " + toImport.values.entrySet().stream().map(Object::toString).collect(Collectors.joining(",")));
                             Integer newId = (Integer) command.createObject(model.getName(), toImport.values);
                             
                             // also create or update reference id if used
@@ -132,7 +129,7 @@ public class Import {
                             }
                         } else {
                             // update
-                            log.info("updating object with values " + toImport.values.entrySet().stream().map(a -> a.toString()).collect(Collectors.joining(",")));
+                            log.info("updating object with values " + toImport.values.entrySet().stream().map(Object::toString).collect(Collectors.joining(",")));
                             command.writeObject(model.getName(), (Integer) toImport.values.get("id"), toImport.values);
                             
                         }
@@ -165,8 +162,12 @@ public class Import {
         OdooValue initValue = new OdooValue(null, null, stringValue);
         OdooValue resultValue = field.getTarget().stream().reduce(initValue ,(previous, target) -> {
             
-            log.info("target is : " + target.toString() + " from value " + previous.value + " in field " + field.getName());
+            log.trace("target is : " + target + " from value " + previous.value + " in field " + field.getName());
             OdooModel targetModel = allModels.stream().filter(model1 -> model1.getName().equals(target.getModel())).findFirst().orElse(null);
+
+            if (targetModel == null) {
+                return previous;
+            }
             
             // cast previous value to new field type
             // handle many to many object formatting
@@ -188,20 +189,20 @@ public class Import {
                         if (target.getRef() != null ) {
                             String[] refFields = new String[1];
                             refFields[0] = target.getRef();
-                            log.info("model: " + targetModel.getName() + " ,field: " + target.getRef() + ", ids: " + Arrays.stream(listObject.getResponseObjectAsArray()).findFirst().orElse(null));
+                            log.trace("model: " + targetModel.getName() + " ,field: " + target.getRef() + ", ids: " + Arrays.stream(listObject.getResponseObjectAsArray()).findFirst().orElse(null));
                             Object[] readResponse = command.readObject(targetModel.getName(), listObject.getResponseObjectAsArray(), refFields);
                             finalValue = ((Map<String, Object>) readResponse[0]).get(target.getRef());
-                            log.info("found: " + finalValue.toString());
+                            log.trace("found: " + finalValue.toString());
                         }
                 } else {
-                    log.info("No value found for field " + target.getField() + " , value will be empty");
+                    log.trace("No value found for field " + target.getField() + " , value will be empty");
                 }
 
             } catch (XmlRpcException e) {
                log.error("XML RPC exception", e);
             }
 
-            log.info("value " + finalValue + ", model " + targetModel.getName() + " , field " + target.getRef());
+            log.trace("value " + finalValue + ", model " + targetModel.getName() + " , field " + target.getRef());
             return new OdooValue(targetModel, target.getRef(), finalValue);
 
         }, (accumulation, newbie) -> newbie);

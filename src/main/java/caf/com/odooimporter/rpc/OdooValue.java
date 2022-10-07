@@ -1,6 +1,5 @@
 package caf.com.odooimporter.rpc;
 
-import caf.com.odooimporter.config.Mapper;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor
