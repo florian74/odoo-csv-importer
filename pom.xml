@@ -10,7 +10,7 @@
     </parent>
     <groupId>caf.com</groupId>
     <artifactId>odoo-importer</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>LATEST</version>
     <name>odoo-importer</name>
     <description>odoo-importer</description>
     <properties>
@@ -24,6 +24,13 @@
             <url>https://archiva.fp-ws.fr/releases</url>
         </repository>
     </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>reposilite-repository-releases</id>
+            <url>https://archiva.fp-ws.fr/releases</url>
+        </repository>
+    </distributionManagement>
 
 
     <dependencies>
