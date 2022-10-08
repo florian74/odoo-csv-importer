@@ -27,6 +27,9 @@ ODOO_PORT=8069; -> minio rpc port, default is 8069
 ODOO_DATABASE   -> odoo database name
 ODOO_PASSWORD   -> odoo password, odoo 15, api key seems not to work so use a dedicated user password
 ODOO_LOGIN      -> odoo login
+
+APP_SERVER_PORT     -> port to use
+APP_SERVER_LOG_PATH -> path to log directory
 ```
 After that the server can be run as a spring boot jar with java -jar build.jar
 This part is coming soon, I didn't deployed it yet.
@@ -58,7 +61,7 @@ This model contains the mapping between a model Id and a human readable string
 ```
  try {
                 Map<String, Object> fields = service.getFields("product.supplierinfo", new String[]{});
-                log.info("fields from tax " + fields.toString() );
+                log.info("fields:  " + fields.toString() );
 
                 Response p = service.searchObject("product.supplierinfo", new Object[]{});
                 Object[] q = service.readObject("product.supplierinfo", p.getResponseObjectAsArray(), fields.keySet().toArray(new String[0]));
