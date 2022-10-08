@@ -103,6 +103,14 @@ configuration:
       fields:
         - name: "name"
           header: "Categorie du point de vente"
+        - name: "parent_id"
+          header: "Parent"
+          target:
+            - model: "pos.category"
+              field: "name"
+              reF: "id"
+        - name: "display_name"
+          header: "Categorie du point de vente"  
         - name: "id"
           header: "id"
           target:
@@ -171,6 +179,16 @@ configuration:
               ref: "id"
         - name: "product_uom_qty"
           header: "STOCK"
+        - name: "quantity_done"
+          header: "STOCK"
+        - name: "availability"
+          header: "STOCK"
+        - name: "state"
+          set: "done"
+        - name: "move_lines_count"
+          set: "1"
+        - name: "is_inventory"
+          set: "true"
         - name: "location_id"
           set: "Inventory adjustment"
           target:
