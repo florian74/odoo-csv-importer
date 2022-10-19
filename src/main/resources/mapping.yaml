@@ -98,6 +98,8 @@ configuration:
           header: "Rue"
         - name: "comment"
           header: "Notes"
+        - name: "phone"
+          header: "Tel"
              
     - model: "pos.category"
       fields:
