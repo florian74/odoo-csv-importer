@@ -60,6 +60,11 @@ public class OdooModel {
 
 
     public Object cast(String stringValue, String type) {
+        
+        if (stringValue == null) {
+            return null;
+        }
+        
         try {
             switch (type) {
                 case "char":

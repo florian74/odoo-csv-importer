@@ -84,7 +84,11 @@ public class Import {
                                     .filter(field -> csvHead.equals(field.getHeader()))
                                     .forEach(field -> {
                                                 log.trace("found " + field.getName() + " ,value " + line.get(idx) + " header: " + field.getHeader());
-                                                toImport.values.put(field.getName(), line.get(idx));
+                                                if (! "".equals(line.get(idx))) {
+                                                    toImport.values.put(field.getName(), line.get(idx));
+                                                } else {
+                                                    // do nothing, if present it will be set to default else it will be null anyway
+                                                }
                                             }
                                     );
                         });
@@ -97,7 +101,7 @@ public class Import {
                             toImport.values.put(field.getName(), value);
                         });
                         toImport.values.values().removeIf(Objects::isNull);
-
+                        
                         // check existence
                         Response existenceRequest = command.searchObject(model.getName(), new Filter().add("id", "=", toImport.values.get("id") ).build());
                         toImport.exist = existenceRequest.getResponseObjectAsArray().length == 1; // id has been replaced
@@ -146,6 +150,10 @@ public class Import {
     // This function return the processed object representation of the string.
     // It follows eihter target rules of simply cast the object to the right type
     public Object getValue(OdooObject odooObject, Mapper.Field field, List<OdooModel> allModels) {
+        
+        if (odooObject.values.get(field.getName()) == null) {
+            return null;
+        }
         
         // when no target is indicated
         // import directly field when it target directly the right model
