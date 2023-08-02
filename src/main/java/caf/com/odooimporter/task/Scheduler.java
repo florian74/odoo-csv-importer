@@ -28,16 +28,21 @@ public class Scheduler {
     @Scheduled(cron = "${cron.schedule}")
     public void execute() {
         log.info("Task begin");
+
+        // prevent loosing file when they are uploaded in the meantime
+        store.lock();
         
+        // get the file
         Set<Path> paths = store.getFiles();
+        
         log.info("found " + paths.size() + " element to import");
         
+        // import
         importer.importAll(paths);
-       
         
-       log.info("store reset start");
-       store.reset();
-        
+        // reset and unlock
+        log.info("store reset start");
+        store.reset();
     }
     
 }

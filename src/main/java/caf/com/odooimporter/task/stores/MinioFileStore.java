@@ -26,13 +26,26 @@ public class MinioFileStore extends FileStore {
 
     
     String path;
+    Boolean isLocked = false;
     String bucket;
     MinioClient client;
     
     // TODO parametrized this 3 fields
     String prefix = "auto/";            // must end with /
+    String tmpPrefix = "tmp/";
+
+    String autoFolder = "auto";
     String importedFolder = "imported"; // must not end with /
+    String temporaryFolder = "tmp"; // must not end with /
     Boolean deleteSource = true;
+    
+    private String getPrefix() {
+        if (isLocked) {
+            return tmpPrefix;
+        }
+        return prefix;
+    }
+    
     
     public MinioFileStore(String path, String url, String secretKey, String accessKey, String bucket) {
         log.info("Using minio store, url " + url +  ", path:" + path);
@@ -44,6 +57,32 @@ public class MinioFileStore extends FileStore {
                 .build();
     }
     
+    @Override
+    public boolean lock() {
+        
+        try {
+            moveItems(temporaryFolder, true);
+            isLocked = true;
+            return true;
+        } catch (Exception e) {
+            log.error("could not move item from bucket", e);
+            return false;
+        }
+        
+    }
+    
+    @Override
+    public boolean unLock() {
+        try{
+            moveItems(autoFolder, true);
+            isLocked = false;
+            return true;
+        }  catch (Exception e) {
+            log.error("could not move item from bucket", e);
+            return false;
+        }
+    }
+    
     // download all items in "auto" folder of the given bucket
     @Override
     public Set<Path> getFiles() {
@@ -53,12 +92,14 @@ public class MinioFileStore extends FileStore {
                     item -> {
                         try {
                             Item toDownload =item.get();
+                            log.info(path + "/" + toDownload.objectName().substring(getPrefix().length()));
                             if (! toDownload.isDir()) {
+                                Files.deleteIfExists(Paths.get(path + "/" + toDownload.objectName().substring(getPrefix().length())));
                                 client.downloadObject(
                                         DownloadObjectArgs.builder()
                                                 .bucket(bucket)
                                                 .object(toDownload.objectName())
-                                                .filename(path + "/" + toDownload.objectName().substring(prefix.length()))
+                                                .filename(path + "/" + toDownload.objectName().substring(getPrefix().length()))
                                                 .build());
                             }
                         }
@@ -86,6 +127,11 @@ public class MinioFileStore extends FileStore {
         try {
             moveItems(importedFolder, deleteSource);
             super.clearFolder(path);
+
+            if (isLocked) {
+                unLock();
+            }
+            
         } catch (Exception e) {
             log.error("could not reset store", e);
         }
@@ -101,7 +147,7 @@ public class MinioFileStore extends FileStore {
         }
         
         return client.listObjects(ListObjectsArgs.builder()
-                .prefix(prefix)
+                .prefix(getPrefix())
                 .recursive(true)
                 .bucket(bucket)
                 .build());
@@ -116,7 +162,7 @@ public class MinioFileStore extends FileStore {
                             client.copyObject(
                                     CopyObjectArgs.builder()
                                             .bucket(bucket)
-                                            .object(folder + "/" + toMove.objectName().substring(prefix.length()))
+                                            .object(folder + "/" + toMove.objectName().substring(getPrefix().length()))
                                             .source(
                                                     CopySource.builder()
                                                             .bucket(bucket)
@@ -139,5 +185,6 @@ public class MinioFileStore extends FileStore {
                     }
                 }
         );
+        log.info("items moved to " + folder + " from " + getPrefix());
     }
 }

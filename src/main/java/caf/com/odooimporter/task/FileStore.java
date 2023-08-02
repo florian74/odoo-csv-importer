@@ -15,7 +15,16 @@ public abstract class FileStore {
     // for now this is simple and does not allow sub paths
     public abstract Set<Path> getFiles();
     
+    // lock the file list, move the files to a temporary folder
+    // return true if lock is successfull
+    public abstract boolean lock();
+    
+    // remove the temporary folder, and remaining files are copy back to the location
+    // return true if unlock is successfull
+    public abstract boolean unLock();
+    
     // reset file store so that it can be ready for the next iteration
+    // perform unLock if not done
     public abstract void reset();
     
     // remove all file from a given folder
